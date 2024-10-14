@@ -68,10 +68,9 @@ latex_elements = {
     'preamble': r'''
 % Paquetes adicionales
 \usepackage[firstpage=true]{background}
-\usepackage{graphicx}
-\usepackage{titling}
-\usepackage{etoolbox}
-\usepackage[titles]{tocloft}
+\usepackage{graphicx} % Asegura que graphicx esté cargado
+\usepackage{titling}  % Para personalizar el título
+\usepackage{xcolor}   % Para colores personalizados
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
@@ -82,36 +81,52 @@ latex_elements = {
   color=black,
   opacity=0.3,
   angle=0,
-  contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}}
-}
-
-% Configuración del título, versión, ocultar autor y fecha
-\pretitle{\begin{center}\Huge\color{NavyBlue}}
-\posttitle{\par\vspace{1cm}\end{center}}
-\preauthor{}
-\postauthor{}
-\predate{}
-\postdate{}
-
-\titleformat{\chapter}[block]
-{\centering\Huge\bfseries\color{DarkRed}}
-{}{0pt}{}
-\renewcommand{\maketitle}{
-  \begin{center}
-    \vspace*{5cm}
-    {\Huge \thetitle}
-    \vspace{1cm}
-    {\Large Versión: \theversion}
-  \end{center}
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}} % Ruta relativa de la imagen
 }
 
 % Configuración de la tabla de contenidos y estilos
+\usepackage[titles]{tocloft}
 \cftsetpnumwidth{1.25cm}
 \cftsetrmarg{1.5cm}
 \setlength{\cftchapnumwidth}{0.75cm}
 \setlength{\cftsecindent}{\cftchapnumwidth}
 \setlength{\cftsecnumwidth}{1.25cm}
 \renewcommand{\cftsecpagefont}{\color{red}}
+
+% Estilo de los capítulos
+\usepackage[Bjornstrup]{fncychap}
+
+% --- Personalización del Título ---
+% Ocultar autor y fecha
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+
+% Personalizar el título
+\pretitle{%
+  \begin{center}
+  \vspace*{2cm} % Espacio vertical antes del título (ajusta según necesidad)
+  \Huge\bfseries\color{RoyalBlue} % Tamaño, peso y color del título
+}
+\posttitle{\par\end{center}\vspace{1cm}} % Espacio vertical después del título
+
+% Personalizar la versión (release) como subtítulo
+\newcommand{\sphinxrelease}{%
+  \begin{center}
+  \Large\textit{Versión \SphinxRelease} % Tamaño y estilo de la versión
+  \end{center}
+  \vspace{1cm} % Espacio vertical después de la versión
+}
+
+% Redefinir \maketitle para incluir la versión
+\let\originalmaketitle\maketitle
+\renewcommand{\maketitle}{%
+  \begin{titlingpage}
+    \originalmaketitle
+    \sphinxrelease
+  \end{titlingpage}
+}
 ''',
     'sphinxsetup': '''
     TitleColor={RGB}{240,56,97},
@@ -119,6 +134,7 @@ latex_elements = {
 ''',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
+
 }
 
 
