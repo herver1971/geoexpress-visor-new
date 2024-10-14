@@ -68,9 +68,9 @@ latex_elements = {
     'preamble': r'''
 % Paquetes adicionales
 \usepackage[firstpage=true]{background}
-\usepackage{graphicx} % Asegura que graphicx esté cargado
-\usepackage{titling}  % Para personalizar el título
-\usepackage{xcolor}   % Para colores personalizados
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{etoolbox}
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
@@ -81,7 +81,31 @@ latex_elements = {
   color=black,
   opacity=0.3,
   angle=0,
-  contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}} % Ruta relativa de la imagen
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}}
+}
+
+% Ocultar autor y fecha con titling
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+
+% Estilo del título y la versión
+\pretitle{\begin{center}\Huge\color{DarkRed}\vspace*{8cm}}  % Título centrado, color y espaciado
+\posttitle{\par\vspace{1cm}\end{center}}  % Espacio después del título
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+
+% Redefinir el comando \maketitle para personalizar la portada
+\renewcommand{\maketitle}{
+  \begin{center}
+    \vspace*{8cm}  % Ajusta la distancia desde el borde superior
+    {\Huge \thetitle}  % Título en color y tamaño grande
+    \vspace{1cm}  % Espacio entre el título y la versión
+    {\Large \theversion}  % Versión
+  \end{center}
 }
 
 % Configuración de la tabla de contenidos y estilos
@@ -92,41 +116,6 @@ latex_elements = {
 \setlength{\cftsecindent}{\cftchapnumwidth}
 \setlength{\cftsecnumwidth}{1.25cm}
 \renewcommand{\cftsecpagefont}{\color{red}}
-
-% Estilo de los capítulos
-\usepackage[Bjornstrup]{fncychap}
-
-% --- Personalización del Título ---
-% Ocultar autor y fecha
-\preauthor{}
-\postauthor{}
-\predate{}
-\postdate{}
-
-% Personalizar el título
-\pretitle{%
-  \begin{center}
-  \vspace*{2cm} % Espacio vertical antes del título (ajusta según necesidad)
-  \Huge\bfseries\color{RoyalBlue} % Tamaño, peso y color del título
-}
-\posttitle{\par\end{center}\vspace{1cm}} % Espacio vertical después del título
-
-% Personalizar la versión (release) como subtítulo
-\newcommand{\sphinxrelease}{%
-  \begin{center}
-  \Large\textit{Versión \SphinxRelease} % Tamaño y estilo de la versión
-  \end{center}
-  \vspace{1cm} % Espacio vertical después de la versión
-}
-
-% Redefinir \maketitle para incluir la versión
-\let\originalmaketitle\maketitle
-\renewcommand{\maketitle}{%
-  \begin{titlingpage}
-    \originalmaketitle
-    \sphinxrelease
-  \end{titlingpage}
-}
 ''',
     'sphinxsetup': '''
     TitleColor={RGB}{240,56,97},
@@ -134,7 +123,6 @@ latex_elements = {
 ''',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
-
 }
 
 
