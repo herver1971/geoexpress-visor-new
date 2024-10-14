@@ -68,7 +68,10 @@ latex_elements = {
     'preamble': r'''
 % Paquetes adicionales
 \usepackage[firstpage=true]{background}
-\usepackage{graphicx} % Asegura que graphicx esté cargado
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{etoolbox}
+\usepackage[titles]{tocloft}
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
@@ -79,24 +82,36 @@ latex_elements = {
   color=black,
   opacity=0.3,
   angle=0,
-  contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}} % Ruta relativa de la imagen
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}}
 }
 
-% Eliminar el autor y la fecha en el título
-\author{}  % Vaciar el autor
-\date{}    % Eliminar la fecha
+% Configuración del título, versión, ocultar autor y fecha
+\pretitle{\begin{center}\Huge\color{NavyBlue}}
+\posttitle{\par\vspace{1cm}\end{center}}
+\preauthor{}
+\postauthor{}
+\predate{}
+\postdate{}
+
+\titleformat{\chapter}[block]
+{\centering\Huge\bfseries\color{DarkRed}}
+{}{0pt}{}
+\renewcommand{\maketitle}{
+  \begin{center}
+    \vspace*{5cm}
+    {\Huge \thetitle}
+    \vspace{1cm}
+    {\Large Versión: \theversion}
+  \end{center}
+}
 
 % Configuración de la tabla de contenidos y estilos
-\usepackage[titles]{tocloft}
 \cftsetpnumwidth{1.25cm}
 \cftsetrmarg{1.5cm}
 \setlength{\cftchapnumwidth}{0.75cm}
 \setlength{\cftsecindent}{\cftchapnumwidth}
 \setlength{\cftsecnumwidth}{1.25cm}
 \renewcommand{\cftsecpagefont}{\color{red}}
-
-% Estilo de los capítulos
-\usepackage[Bjornstrup]{fncychap}
 ''',
     'sphinxsetup': '''
     TitleColor={RGB}{240,56,97},
@@ -104,7 +119,7 @@ latex_elements = {
 ''',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
-
 }
+
 
 # Opciones adicionales de LaTeX, si las hay, pueden añadirse aquí
