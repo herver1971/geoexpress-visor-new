@@ -82,8 +82,6 @@ latex_elements = {
   contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}} % Ruta relativa de la imagen
 }
 
-
-
 % Eliminar el autor y la fecha en el título
 \author{}  % Vaciar el autor
 \date{}    % Eliminar la fecha

@@ -33,6 +33,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Delete old folder build
+      run: make clean
+
     - name: Build HTML Documentation
       run: make html
 
@@ -43,7 +46,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: html-docs
-        path: docs/build/html
+        path: docs/build/html/
 
     - name: Upload PDF Documentation
       uses: actions/upload-artifact@v3
