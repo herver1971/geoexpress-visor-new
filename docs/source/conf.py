@@ -82,17 +82,6 @@ latex_elements = {
   contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}} % Ruta relativa de la imagen
 }
 
-% Redefinir \sphinxmaketitle para personalizar el título y la versión
-\renewcommand{\sphinxmaketitle}{%
-  \begin{titlepage}
-    \vspace*{6cm} % Ajusta el espacio vertical según sea necesario
-    \begin{center}
-      {\Huge \sffamily \bfseries \color[RGB]{240,56,97} \sphinxproject} \\[1em] % Título en color RGB
-      {\Large \sffamily \bfseries \color[RGB]{240,56,97} Versión \sphinxrelease} % Versión en color RGB
-    \end{center}
-  \end{titlepage}
-}
-
 
 
 % Eliminar el autor y la fecha en el título
