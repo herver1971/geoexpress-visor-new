@@ -52,7 +52,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: pdf-docs
-        path: docs/build/latex/geoexpress-visor.pdf
+        path: docs/build/latex/geoexpressvisor.pdf
 
     # 7. Commit and push the generated documentation
     - name: Commit and push changes
