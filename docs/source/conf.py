@@ -92,19 +92,23 @@ latex_elements = {
 \date {}
 \postdate {}  % Sin fecha
 
-% Modificar título y versión
-\pretitle{\begin{center}\Huge\color{NavyBlue}}  % Cambia el color del título a NavyBlue
-\posttitle{\par\vspace{2cm}\end{center}}  % Aumentar espacio debajo del título
 
-% Redefinir \maketitle para ajustar la posición y formato del título
-\renewcommand{\sphinxmaketitle}{%
-  \begin{center}
-    \vspace*{7cm}  % Mover el título hacia abajo
-    {\Huge \textbf{\color{NavyBlue} \thetitle}}  % Título del proyecto en grande y color azul
-    \vspace{1.5cm}  % Espacio entre el título y la versión
-    {\Large \textbf{Versión:} \color{DarkRed} \theversion}  % Mostrar la versión en grande y en color rojo oscuro
-  \end{center}
-}
+% Definir la macro de versión a partir del valor en conf.py
+\newcommand{\therelease}{''' + release + r'''}
+
+    % Redefinir \sphinxmaketitle para ajustar la posición y formato del título
+    \renewcommand{\sphinxmaketitle}{%
+      \begingroup
+        \begin{center}
+          \vspace*{4cm}  % Mover el título hacia abajo
+          {\Huge \textbf{\color[RGB]{240,56,97} \thetitle}}  % Título del proyecto en grande y color magenta
+          \vspace{1.5cm}  % Espacio entre el título y la versión
+          \\
+          {\Large \textbf{\color[RGB]{240,56,97} Versión:} \color[RGB]{240,56,97} \therelease}  % Mostrar la versión en grande y en color magenta
+        \end{center}
+      \endgroup
+    }
+
 
 % Configuración de la tabla de contenidos y estilos
 \cftsetpnumwidth{1.25cm}
@@ -113,11 +117,41 @@ latex_elements = {
 \setlength{\cftsecindent}{\cftchapnumwidth}
 \setlength{\cftsecnumwidth}{1.25cm}
 \renewcommand{\cftsecpagefont}{\color{red}}
+
+% Eliminar numeración de las páginas previas a los capítulos
+    \fancypagestyle{plain}{ % Definir estilo para páginas previas al capítulo
+        \fancyhf{}  % Eliminar encabezado y pie de página
+        \renewcommand{\headrulewidth}{0pt}  % Eliminar línea del encabezado
+        \renewcommand{\footrulewidth}{0pt}  % Eliminar línea del pie de página
+        \pagestyle{empty}  % No numerar las páginas
+    }
+
+    % Configurar estilo de las páginas de los capítulos
+    \fancypagestyle{normal}{ % Estilo para las páginas de los capítulos
+        \fancyhf{}  % Eliminar cualquier encabezado y pie por defecto
+        \renewcommand{\headrulewidth}{0pt}  % Eliminar la línea del encabezado
+        \renewcommand{\footrulewidth}{0pt}  % Eliminar la línea del pie de página
+        \fancyfoot[R]{\thepage}  % Numerar las páginas de los capítulos en el centro
+    }
+
+    % Asegurar que solo las páginas de los capítulos muestren la numeración en arábigos
+    \renewcommand{\chapterpagestyle}{normal}  % Aplicar estilo 'normal' a las páginas de los capítulos
+    \pagenumbering{arabic}  % Usar numeración arábiga para las páginas del capítulo
+
+% Establecer color y alineación predeterminados para el contenido principal
+    \AtBeginDocument{%
+      \color{black}  % Establece el color del texto principal a negro
+      \raggedright   % Alinea el texto a la izquierda sin justificar
+    }
+
 ''',
     'sphinxsetup': '''
-    TitleColor={RGB}{240,56,97},
     InnerLinkColor={RGB}{240,56,97},
-''',
+    % TitleColor={RGB}{240,56,97},  % Comentado para evitar aplicar color global al título
+    verbatimwithframe=false,
+    VerbatimColor={rgb}{0.9,0.9,0.9},
+    VerbatimBorderColor={rgb}{0.8,0.8,0.8},
+    ''',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
 }
