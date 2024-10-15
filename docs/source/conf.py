@@ -52,10 +52,7 @@ html_static_path = ['_static']
 
 latex_engine = 'xelatex'
 latex_show_urls = 'footnote'
-latex_additional_files = [
-  '_static/images/cabecerakan.png',
-  '_static/images/header_bg.png'
-]
+latex_additional_files = ['_static/images/cabecerakan.png']
 
 latex_elements = {
     'papersize': 'a4paper',
