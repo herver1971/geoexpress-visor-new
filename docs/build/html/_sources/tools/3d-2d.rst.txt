@@ -1,0 +1,10 @@
+Vista 3D/2D
+===========
+
+El visor Geoexpress ofrece la ventaja de poder mostrar capas tanto en 3D como en 2D. Para optimizar la visualización de cada tipo de capa, el visor incluye una vista 3D y una vista 2D, siendo esta última la visualización cenital predeterminada del mapa. Entre las herramientas de navegación, el ícono de vista 3D, al hacer clic, activa dicha vista, inclinando el mapa para permitir una mejor apreciación del relieve en capas 3D, ya sea de una capa vectorial, un objeto 3D, un DEM o un mesh.
+
+Para volver a la vista 2D desde la 3D, basta con hacer clic nuevamente en el mismo ícono.
+
+.. image:: images/3d-2d.png
+
+
