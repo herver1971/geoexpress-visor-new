@@ -13,7 +13,7 @@ html:
 
 latexpdf:
 	sphinx-build -b latex docs/source docs/build/latex
-	cd docs/build/latex && latexmk -xelatex -quiet -interaction=nonstopmode -f *.tex
+	cd docs/build/latex && latexmk -xelatex -quiet -interaction=nonstopmode -f *.tex || true
 
 clean:
 	rm -rf docs/build/*
