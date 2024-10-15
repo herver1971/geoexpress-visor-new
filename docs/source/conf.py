@@ -52,7 +52,10 @@ html_static_path = ['_static']
 
 latex_engine = 'xelatex'
 latex_show_urls = 'footnote'
-latex_additional_files = ['_static/images/cabecerakan.png']
+latex_additional_files = [
+  '_static/images/cabecerakan.png',
+  '_static/images/header_bg.png'
+]
 
 latex_elements = {
     'papersize': 'a4paper',
@@ -72,6 +75,8 @@ latex_elements = {
 \usepackage{titling}
 \usepackage{etoolbox}
 \usepackage[titles]{tocloft}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
@@ -147,7 +152,6 @@ latex_elements = {
 ''',
     'sphinxsetup': '''
     InnerLinkColor={RGB}{240,56,97},
-    % TitleColor={RGB}{240,56,97},  % Comentado para evitar aplicar color global al título
     verbatimwithframe=false,
     VerbatimColor={rgb}{0.9,0.9,0.9},
     VerbatimBorderColor={rgb}{0.8,0.8,0.8},
