@@ -39,20 +39,20 @@ jobs:
     - name: Build HTML Documentation
       run: make html
 
-    - name: Build PDF Documentation
-      run: make latexpdf
-
     - name: Upload HTML Documentation
       uses: actions/upload-artifact@v3
       with:
         name: html-docs
         path: docs/build/html/
-
-   # - name: Upload PDF Documentation
-    #  uses: actions/upload-artifact@v3
-     # with:
-      #  name: pdf-docs
-       # path: docs/build/latex/geoexpress-visor.pdf
+        
+    - name: Build PDF Documentation
+      run: make latexpdf
+      
+    - name: Upload PDF Documentation
+      uses: actions/upload-artifact@v3
+      with:
+        name: pdf-docs
+        path: docs/build/latex/geoexpress-visor.pdf
 
     # 7. Commit and push the generated documentation
     - name: Commit and push changes
