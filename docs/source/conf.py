@@ -71,6 +71,7 @@ latex_elements = {
 \usepackage{graphicx}
 \usepackage{titling}
 \usepackage{etoolbox}
+\usepackage[titles]{tocloft}
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
@@ -84,32 +85,28 @@ latex_elements = {
   contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}}
 }
 
-% Ocultar autor y fecha con titling
-\preauthor{}
-\postauthor{}
-\predate{}
-\postdate{}
+% Ocultar autor y fecha, asegurando que no se muestren
+\preauthor {}  % Vaciar autor
+\postauthor {}  % Sin efecto de autor
+\predate {}  % Sin fecha
+\date {}
+\postdate {}  % Sin fecha
 
-% Estilo del título y la versión
-\pretitle{\begin{center}\Huge\color{DarkRed}\vspace*{8cm}}  % Título centrado, color y espaciado
-\posttitle{\par\vspace{1cm}\end{center}}  % Espacio después del título
-\preauthor{}
-\postauthor{}
-\predate{}
-\postdate{}
+% Modificar título y versión
+\pretitle{\begin{center}\Huge\color{NavyBlue}}  % Cambia el color del título a NavyBlue
+\posttitle{\par\vspace{2cm}\end{center}}  % Aumentar espacio debajo del título
 
-% Redefinir el comando \maketitle para personalizar la portada
-\renewcommand{\maketitle}{
+% Redefinir \maketitle para ajustar la posición y formato del título
+\renewcommand{\sphinxmaketitle}{%
   \begin{center}
-    \vspace*{8cm}  % Ajusta la distancia desde el borde superior
-    {\Huge \thetitle}  % Título en color y tamaño grande
-    \vspace{1cm}  % Espacio entre el título y la versión
-    {\Large \theversion}  % Versión
+    \vspace*{7cm}  % Mover el título hacia abajo
+    {\Huge \textbf{\color{NavyBlue} \thetitle}}  % Título del proyecto en grande y color azul
+    \vspace{1.5cm}  % Espacio entre el título y la versión
+    {\Large \textbf{Versión:} \color{DarkRed} \theversion}  % Mostrar la versión en grande y en color rojo oscuro
   \end{center}
 }
 
 % Configuración de la tabla de contenidos y estilos
-\usepackage[titles]{tocloft}
 \cftsetpnumwidth{1.25cm}
 \cftsetrmarg{1.5cm}
 \setlength{\cftchapnumwidth}{0.75cm}
