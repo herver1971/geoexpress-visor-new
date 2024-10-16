@@ -133,7 +133,7 @@ latex_elements = {
         \fancyhf{}  % Eliminar cualquier encabezado y pie por defecto
         \renewcommand{\headrulewidth}{0pt}  % Eliminar la línea del encabezado
         \renewcommand{\footrulewidth}{0pt}  % Eliminar la línea del pie de página
-        \fancyfoot[R]{\thepage}  % Numerar las páginas de los capítulos en el centro
+        \rfoot[\thepage]{\thepage}  % Numerar las páginas de los capítulos en el centro
     }
 
     % Asegurar que solo las páginas de los capítulos muestren la numeración en arábigos
