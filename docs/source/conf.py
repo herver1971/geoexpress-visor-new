@@ -77,13 +77,8 @@ latex_elements = {
 \usepackage[titles]{tocloft}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
-<<<<<<< HEAD
 \pagestyle{fancy}
 
-=======
-
-% \usepackege{fncychap}
->>>>>>> 3130043624654ef6c1ff0f7ae14168d47656a094
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
@@ -103,7 +98,6 @@ latex_elements = {
 \predate {}  % Sin fecha
 \date {}
 \postdate {}  % Sin fecha
-
 
 % Definir la macro de versión a partir del valor en conf.py
 \newcommand{\therelease}{''' + release + r'''}
