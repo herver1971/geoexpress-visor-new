@@ -57,7 +57,6 @@ latex_additional_files = ['_static/images/cabecerakan.png',
 '_static/images/encabezado.png']
 
 latex_elements = {
-    'papersize': 'a4paper',
     'pointsize': '11pt',
     'classoptions': ',openany',
     'passoptionstopackages': r'''
@@ -76,6 +75,9 @@ latex_elements = {
 \usepackage{etoolbox}
 \usepackage[titles]{tocloft}
 \usepackage{xcolor}
+\usepackage{geometry}
+
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
@@ -124,18 +126,10 @@ latex_elements = {
 \setlength{\cftsecnumwidth}{1.25cm}
 \renewcommand{\cftsecpagefont}{\color{red}}
 
-% Eliminar numeración de las páginas previas a los capítulos
-    \fancypagestyle{plain}{ % Definir estilo para páginas previas al capítulo
-        \fancyhf{}  % Eliminar encabezado y pie de página
-        \fancyhead[C]{\includegraphics[width=\textwidth]{encabezado.png}}  % Insertar imagen en el encabezado
-        \renewcommand{\headrulewidth}{0pt}  % Eliminar línea del encabezado
-        \renewcommand{\footrulewidth}{0pt}  % Eliminar línea del pie de página
-        \pagestyle{empty}  % No numerar las páginas
-    }
-
     % Configurar estilo de las páginas de los capítulos
     \fancypagestyle{normal}{ % Estilo para las páginas de los capítulos
         \fancyhf{}  % Eliminar cualquier encabezado y pie por defecto
+        \fancyhead[C]{\includegraphics{encabezado.png}}        
         \renewcommand{\headrulewidth}{0pt}  % Eliminar la línea del encabezado
         \renewcommand{\footrulewidth}{0pt}  % Eliminar la línea del pie de página
         \rfoot[\thepage]{\thepage}  % Numerar las páginas de los capítulos en el centro
