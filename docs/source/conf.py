@@ -52,11 +52,14 @@ html_static_path = ['_static']
 
 latex_engine = 'xelatex'
 latex_show_urls = 'footnote'
-latex_additional_files = ['_static/images/cabecerakan.png']
+latex_additional_files = ['_static/images/cabecerakan.png',
+'_static/images/logokan.png',
+'_static/images/encabezado.png']
 
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '11pt',
+    'classoptions': ',openany',
     'passoptionstopackages': r'''
 \PassOptionsToPackage{svgnames}{xcolor}
 ''',
@@ -74,7 +77,8 @@ latex_elements = {
 \usepackage[titles]{tocloft}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
-\usepackege{fncychap}
+\pagestyle{fancy}
+
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
@@ -85,7 +89,7 @@ latex_elements = {
   color=black,
   opacity=0.3,
   angle=0,
-  contents={\includegraphics[width=\paperwidth,height=\paperheight]{cabecerakan.png}}
+  contents={\includegraphics[width=\paperwidth,height=\paperheight]{logokan.png}}
 }
 
 % Ocultar autor y fecha, asegurando que no se muestren
@@ -103,11 +107,11 @@ latex_elements = {
     \renewcommand{\sphinxmaketitle}{%
       \begingroup
         \begin{center}
-          \vspace*{4cm}  % Mover el título hacia abajo
-          {\Huge \textbf{\color[RGB]{240,56,97} \thetitle}}  % Título del proyecto en grande y color magenta
-          \vspace{1.5cm}  % Espacio entre el título y la versión
+          \vspace*{6cm}  % Mover el título hacia abajo
+          {\Huge \textbf{\color[RGB]{245,63,97} \thetitle}}  % Título del proyecto en grande y color magenta
+          \vspace{0.5cm}  % Espacio entre el título y la versión
           \\
-          {\Large \textbf{\color[RGB]{240,56,97} Versión:} \color[RGB]{240,56,97} \therelease}  % Mostrar la versión en grande y en color magenta
+          {\Large \textbf{\color[RGB]{245,63,97} Versión:} \color[RGB]{245,63,97} \therelease}  % Mostrar la versión en grande y en color magenta
         \end{center}
       \endgroup
     }
@@ -124,6 +128,7 @@ latex_elements = {
 % Eliminar numeración de las páginas previas a los capítulos
     \fancypagestyle{plain}{ % Definir estilo para páginas previas al capítulo
         \fancyhf{}  % Eliminar encabezado y pie de página
+        \fancyhead[C]{\includegraphics[width=\textwidth]{encabezado.png}}  % Insertar imagen en el encabezado
         \renewcommand{\headrulewidth}{0pt}  % Eliminar línea del encabezado
         \renewcommand{\footrulewidth}{0pt}  % Eliminar línea del pie de página
         \pagestyle{empty}  % No numerar las páginas
@@ -149,12 +154,12 @@ latex_elements = {
 
 ''',
     'sphinxsetup': '''
-    InnerLinkColor={RGB}{240,56,97},
+    InnerLinkColor={RGB}{245,63,97},
     verbatimwithframe=false,
     VerbatimColor={rgb}{0.9,0.9,0.9},
     VerbatimBorderColor={rgb}{0.8,0.8,0.8},
     ''',
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+
     'printindex': r'\footnotesize\raggedright\printindex',
 }
 

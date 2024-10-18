@@ -1,0 +1,31 @@
+\selectlanguage *{spanish}
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Tabla de contenidos}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Navegación}{2}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Navegación de la interfaz}{2}{subsection.2.1.1}%
+\contentsline {subsubsection}{Controles}{2}{subsubsection*.3}%
+\contentsline {subsubsection}{Navegación por mouse}{2}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {2.1.2}Barra lateral \sphinxhyphen {} Sidebar}{3}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Tarjeta de capa}{6}{subsection.2.1.3}%
+\contentsline {subsubsection}{Opacidad}{6}{subsubsection*.5}%
+\contentsline {subsubsection}{Zoom a capa}{6}{subsubsection*.6}%
+\contentsline {subsubsection}{Filtros}{7}{subsubsection*.7}%
+\contentsline {subsubsection}{Más operaciones}{7}{subsubsection*.8}%
+\contentsline {subsubsection}{Icono BIM}{9}{subsubsection*.9}%
+\contentsline {subsubsection}{Administracion de capas}{10}{subsubsection*.10}%
+\contentsline {paragraph}{Superposición de capas}{10}{paragraph*.11}%
+\contentsline {paragraph}{Deshabilitar capas}{12}{paragraph*.12}%
+\contentsline {section}{\numberline {2.2}Búsqueda}{14}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Buscador}{14}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Acceso directo a GeoNode}{14}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Herramientas de navegación}{15}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Ubicación}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Zoom}{16}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Orientación}{16}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Vista 3D/2D}{20}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Herramientas para el visor}{20}{subsection.2.3.5}%
+\contentsline {subsubsection}{Medición de distancias}{21}{subsubsection*.13}%
+\contentsline {subsubsection}{Medición de areas}{22}{subsubsection*.14}%
+\contentsline {subsubsection}{Modo presentación}{23}{subsubsection*.15}%
+\contentsline {subsubsection}{Impresión}{24}{subsubsection*.16}%
+\contentsline {section}{\numberline {2.4}Selector de mapa base}{24}{section.2.4}%
