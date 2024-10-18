@@ -77,8 +77,13 @@ latex_elements = {
 \usepackage[titles]{tocloft}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
+<<<<<<< HEAD
 \pagestyle{fancy}
 
+=======
+
+% \usepackege{fncychap}
+>>>>>>> 3130043624654ef6c1ff0f7ae14168d47656a094
 
 % Definir la ruta de búsqueda para imágenes
 \graphicspath{{_static/images/}}
