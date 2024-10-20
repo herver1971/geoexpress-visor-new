@@ -21,6 +21,11 @@ copyright = '2024, Kan Territory & IT'
 author = 'Kan Territory & IT'
 release = '2.2.0'
 
+# -- Configuración para sustitución de la versión en archivos .rst --
+rst_prolog = """
+.. |version| replace:: {release}
+""".format(release=release)
+
 # -- General configuration ---------------------------------------------------
 
 extensions = [
@@ -80,6 +85,7 @@ latex_elements = {
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \pagestyle{fancy}
+\usepackage{wrapfig}
 
 \geometry{
   topmargin=2.5cm,  % Ajusta este valor para controlar el espacio superior
@@ -190,6 +196,7 @@ latex_elements = {
   \color{black}  % Establece el color del texto principal a negro
   \raggedright   % Alinea el texto a la izquierda sin justificar
 }
+
 ''',
     'sphinxsetup': '''
     InnerLinkColor={RGB}{245,63,97},
