@@ -3,9 +3,9 @@ site_url: https://kan.com.ar/
 nav:
   - Home: index.md
   - navigation/index.md
-      - navigation/interfaz.md
-      - navigation/sidebar.md
-      - navigation/cards.md
+  - navigation/interfaz.md
+  - navigation/sidebar.md
+  - navigation/cards.md
   - Search:
       - search/index.md
       - search/search.md
