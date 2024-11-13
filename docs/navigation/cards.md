@@ -30,23 +30,23 @@ El botón **Filtros** permite hacer un filtrado de los datos de la capa. Como ej
 
 El botón **+** nos muestra mas opciones para trabajar con las capas. Nos permite
 
-    * Descargar la capa en formato .zip
+* Descargar la capa en formato .zip
 
-        ![](../images/cards5.png)
+  ![](../images/cards5.png)
 
-    * Activar las referencias de los elementos de la capa
+* Activar las referencias de los elementos de la capa
 
-        ![](../images/cards6.png)
+  ![](../images/cards6.png)
 
-    * Ver informacion de la capa
+* Ver informacion de la capa
 
-    Apretando en
+  Apretando en
 
-        ![](../images/cards7.png)
+  ![](../images/cards7.png)
 
-    Nos muestra
+  Nos muestra
 
-        ![](../images/cards8.png)
+  ![](../images/cards8.png)
 
 
 ## Icono BIM
