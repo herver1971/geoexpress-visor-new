@@ -2,16 +2,14 @@ site_name: GeoExpress Map Viewer
 site_url: https://kan.com.ar/
 nav:
   - Home: index.md
-  - Navigation:
+  - Navegación:
       - navigation/interfaz.md
       - navigation/sidebar.md
       - navigation/cards.md
-  - Search:
-      - search/index.md
+  - Busqueda:
       - search/search.md
       - search/geonode.md
-  - Tools:
-      - tools/index.md
+  - Herramientas:
       - tools/location.md
       - tools/zoom.md
       - tools/orientation.md
