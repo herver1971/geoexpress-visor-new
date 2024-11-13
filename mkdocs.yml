@@ -1,0 +1,77 @@
+site_name: GeoExpress Map Viewer
+site_url: https://kan.com.ar/
+nav:
+  - Home: index.md
+  - Navigation:
+      - navigation/index.md
+      - navigation/interfaz.md
+      - navigation/sidebar.md
+      - navigation/cards.md
+  - Search:
+      - search/index.md
+      - search/search.md
+      - search/geonode.md
+  - Tools:
+      - tools/index.md
+      - tools/location.md
+      - tools/zoom.md
+      - tools/orientation.md
+      - tools/3d-2d.md
+      - tools/measuring.md
+  - basemap/index.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+
+theme:
+  name: 'material'
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+    repo: fontawesome/brands/github
+  features:
+    - search.suggest
+    - navigation.footer
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: es
+          name: Español
+          build: true
+        - locale: pt
+          name: Português
+          build: true
+
+extra:
+  homepage: https://kan.com.ar
+  analytics:
+    provider: google
+    property: G-E7XJKS2PK3
+  alternate:
+    - name: English
+      lang: en
+    - name: Español
+      lang: es
+      link: es/
+    - name: Portuguese
+      lang: pt
+      link: pt/
+
+repo_url: https://github.com/Kan-T-IT/geoexpress-map-viewer-documentation
+
+
+  
