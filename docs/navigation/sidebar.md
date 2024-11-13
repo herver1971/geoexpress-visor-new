@@ -1,6 +1,6 @@
 # Barra lateral - Sidebar
 
-![](../images/barra.png){ align=left }{ width=25% }
+![](../images/barra.png){ align=left }
 
 A la izquierda de la pantalla se puede ver una barra lateral vertical que permite navegar entre categorías y subcategorías para activar o desactivar las capas predefinidas por el cliente desde **Layers Manager** y visualizarlas u ocultarlas.
 
