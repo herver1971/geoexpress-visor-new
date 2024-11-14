@@ -34,5 +34,5 @@ jobs:
 
       # Desplegar el sitio en GitHub Pages
       - name: Deploy to GitHub Pages
-        if: ${{ matrix.lang == 'en' }}  # Solo una vez en inglés (o cualquier idioma base)
+        if: ${{ matrix.lang == 'es' }}  # Solo una vez en inglés (o cualquier idioma base)
         run: mkdocs gh-deploy --force
