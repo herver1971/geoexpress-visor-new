@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        lang: [en, es, pt]  # Idiomas a construir
+        lang: [es, en, pt]  # Idiomas a construir
+        config: [mkdocs.yml, mkdocs.en.yml, mkdocs.pt.yml]
 
     steps:
       - uses: actions/checkout@v4
