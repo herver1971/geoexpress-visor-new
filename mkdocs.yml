@@ -9,8 +9,7 @@ nav:
   - Busqueda:
       - search/search.md
       - search/geonode.md
-  - Herramientas:
-      - tools/location.md
+  - tools/location.md
       - tools/zoom.md
       - tools/orientation.md
       - tools/3d-2d.md
