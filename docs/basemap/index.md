@@ -1,6 +1,10 @@
 # Selector de mapa base
 
-En la esquina inferior derecha de la pantalla, se encuentra un cuadrado con un mapa en su interior, con el cual es posible elegir el mapa base del visor, sobre el que se muestran todas las capas. Al pasar el cursor sobre este cuadrado, se despliegan junto a él otros 4 cuadrados con un mapa base diferente cada uno.
+En la esquina inferior derecha de la pantalla, se encuentra un cuadrado con un mapa en su interior, con el cual es posible elegir el mapa base del visor, sobre el que se muestran todas las capas.
+
+![](../images/base.png)
+
+Al pasar el cursor sobre este cuadrado, se despliegan junto a él otros 4 cuadrados con un mapa base diferente cada uno.
 
 ![](../images/base1.png)
 

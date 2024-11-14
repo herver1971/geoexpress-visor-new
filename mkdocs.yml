@@ -42,12 +42,12 @@ plugins:
   - i18n:
       docs_structure: folder
       languages:
-        - locale: en
-          default: true
-          name: English
-          build: true
         - locale: es
+          default: true
           name: Español
+          build: true
+        - locale: en
+          name: English
           build: true
         - locale: pt
           name: Português
@@ -57,18 +57,17 @@ extra:
   homepage: https://kan.com.ar
   analytics:
     provider: google
-    property: G-E7XJKS2PK3
+    property: G-CX629PT790
   alternate:
-    - name: English
-      lang: en
     - name: Español
       lang: es
-      link: es/
+    - name: English
+      lang: en
+      link: en/
     - name: Portuguese
       lang: pt
       link: pt/
 
 repo_url: https://github.com/Kan-T-IT/geoexpress-map-viewer-documentation
-
 
   

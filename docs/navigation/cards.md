@@ -5,18 +5,27 @@ La tarjeta de capa permite al usuario diversas operaciones relacionadas con la c
 ## Opacidad
 
 ![](../images/cards1.png)
+/// caption
+Opacidad
+///
 
 En Geoexpress, la opacidad de todas las capas es del 50% por defecto, a menos que se haya determinado una opacidad específica previamente. Algunas capas, como los mesh, DEMs y objetos 3D, tienen opacidad fija y no se puede modificar.
 
 ## Zoom a capa
 
 ![](../images/cards2.png)
+/// caption
+Zoom
+///
 
 El ícono de **Zoom a la capa** ajusta la vista del mapa a la extensión de la capa que se encuentra actualmente activa.
 
 ## Filtros
 
 ![](../images/cards3.png)
+/// caption
+Filtros
+///
 
 El botón **Filtros** permite hacer un filtrado de los datos de la capa. Como ejemplo, la capa Localidades esta organizada por provincias y por medio del filtro, podremos seleccionar algunas, todas o ninguna
 
@@ -27,37 +36,57 @@ El botón **Filtros** permite hacer un filtrado de los datos de la capa. Como ej
 ## Más operaciones
 
 ![](../images/cards4.png)
+/// caption
+Mas operaciones
+///
 
 El botón **+** nos muestra mas opciones para trabajar con las capas. Nos permite
 
 * Descargar la capa en formato .zip
 
   ![](../images/cards5.png)
+  /// caption
+  Descargar
+  ///
 
 * Activar las referencias de los elementos de la capa
 
   ![](../images/cards6.png)
+  /// caption
+  Referencias
+  ///
 
 * Ver informacion de la capa
 
   Apretando en
 
   ![](../images/cards7.png)
+  /// caption
+  Información
+  ///
 
   Nos muestra
 
   ![](../images/cards8.png)
-
+  /// caption
+  Información
+  ///
 
 ## Icono BIM
 
 El ícono de BIM está disponible solo para capas de objetos 3D con archivos .ifc cargados.
 
 ![](../images/cards9.png)
+/// caption
+BIM
+///
 
 Al hacer clic sobre el ícono, permite analizar el objeto 3D y activar o desactivar sus elementos. Para volver al mapa, se hace clic en la flecha en la esquina superior izquierda.
 
 ![](../images/cards10.png)
+/// caption
+Objeto 3D
+///
 
 ## Administracion de capas
 

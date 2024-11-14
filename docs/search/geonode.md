@@ -4,6 +4,6 @@ Este visor permite el acceso directo al [GeoNode de Geoexpress de Kan](https://g
 
 ![](../images/search2.png)
 
-Si contamos con los permisos suficientes podremos cargar nuevas capas, en caso contrario podremos consultarlas.
+Si contamos con los permisos suficientes, podremos cargar nuevas capas, en caso contrario podremos consultarlas.
 
 ![](../images/search3.png)

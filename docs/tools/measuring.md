@@ -1,8 +1,8 @@
 # Herramientas para el visor
 
-![](../images/medicion1.png){ align=left }
-
 El Visor Geoexpress cuenta con herramientas para medir distancias y áreas en el mapa. Hacemos clic en el ícono con forma de llave inglesa, lo que desplegará un submenú con cinco íconos.
+
+![](../images/medicion1.png)
 
 ## Medición de distancias
 

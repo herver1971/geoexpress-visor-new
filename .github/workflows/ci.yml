@@ -1,4 +1,4 @@
-name: ci 
+name: ci
 on:
   push:
     branches:
@@ -8,17 +8,31 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        lang: [en, es, pt]  # Idiomas a construir
+
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-      - uses: actions/cache@v3
+
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
         with:
           key: mkdocs-material-${{ env.cache_id }}
           path: .cache
           restore-keys: |
             mkdocs-material-
+
       - run: pip install mkdocs-material mkdocs-static-i18n
-      - run: mkdocs gh-deploy --force
+
+      # Construir sitio en cada idioma
+      - name: Build site in ${{ matrix.lang }}
+        run: mkdocs build -f mkdocs.${{ matrix.lang }}.yml -d site/${{ matrix.lang }}
+
+      # Desplegar el sitio en GitHub Pages
+      - name: Deploy to GitHub Pages
+        if: ${{ matrix.lang == 'en' }}  # Solo una vez en inglés (o cualquier idioma base)
+        run: mkdocs gh-deploy --force
